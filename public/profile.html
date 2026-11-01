@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="index.html">SSB <span>TRACKER</span></a>
+  <div class="who">
+    <a class="navlink" href="dashboard.html">Dashboard</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink" href="guide.html">Guide</a>
+    <a class="navlink" href="leaderboard.html">Leaderboard</a>
+    <a class="navlink" href="progress.html">Progress</a>
+    <a class="navlink on" href="profile.html">Profile</a>
+    <button class="ghost" id="logout" type="button">Log out</button>
+  </div>
+</nav>
+
+<main class="page narrow">
+  <h1>Profile and settings</h1>
+  <p class="sub" id="email"></p>
+
+  <section class="card">
+    <h2>Your details</h2>
+    <form id="pForm" class="stack">
+      <label>Full name<input type="text" id="pName" required maxlength="60"></label>
+      <div class="two">
+        <label>Entry
+          <select id="pEntry"><option>NDA</option><option>CDS</option><option>AFCAT</option><option>TES</option><option>NCC Special</option></select>
+        </label>
+        <label>SSB date<input type="date" id="pDate"></label>
+      </div>
+      <button class="btn" type="submit">Save details</button>
+      <p class="msg" id="pMsg" role="status"></p>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Change password</h2>
+    <form id="wForm" class="stack">
+      <label>Current password<input type="password" id="wCur" required autocomplete="current-password"></label>
+      <label>New password (min 6 characters)<input type="password" id="wNew" minlength="6" required autocomplete="new-password"></label>
+      <label>Repeat new password<input type="password" id="wNew2" minlength="6" required autocomplete="new-password"></label>
+      <button class="btn" type="submit">Change password</button>
+      <p class="msg" id="wMsg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<script src="js/profile.js"></script>
+</body>
+</html>

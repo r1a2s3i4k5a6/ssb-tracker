@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <link rel="stylesheet" href="/css/progress.css">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="index.html">SSB <span>TRACKER</span></a>
+  <div class="who">
+    <a class="navlink" href="dashboard.html">Dashboard</a>
+    <a class="navlink on" href="admin.html">Admin</a>
+    <button class="ghost" id="logout" type="button">Log out</button>
+  </div>
+</nav>
+
+<main class="page">
+  <h1>Admin panel</h1>
+  <div class="kpis" id="kpis"></div>
+
+  <section class="card">
+    <h2 id="formTitle">Add a quiz question</h2>
+    <form id="qForm" class="stack">
+      <label>Question<input type="text" id="qText" maxlength="300" required></label>
+      <div class="two">
+        <label>Option A<input type="text" id="o0" maxlength="100" required></label>
+        <label>Option B<input type="text" id="o1" maxlength="100" required></label>
+        <label>Option C<input type="text" id="o2" maxlength="100" required></label>
+        <label>Option D<input type="text" id="o3" maxlength="100" required></label>
+      </div>
+      <div class="two">
+        <label>Correct answer<select id="qCorrect"><option value="0">A</option><option value="1">B</option><option value="2">C</option><option value="3">D</option></select></label>
+        <label>Explanation (optional)<input type="text" id="qExp" maxlength="300"></label>
+      </div>
+      <div class="btnrow"><button class="btn" id="qSave" type="submit">Add question</button><button class="ghost" id="qCancel" type="button" hidden>Cancel edit</button></div>
+      <p class="msg" id="qMsg" role="status"></p>
+    </form>
+  </section>
+
+  <section class="card"><h2>Question bank</h2><div class="scroll"><table class="tbl"><thead><tr><th>#</th><th>Question</th><th>Options (correct in gold)</th><th></th></tr></thead><tbody id="qRows"></tbody></table></div></section>
+
+  <section class="card"><h2>Messages from the About page</h2><div id="mList"></div></section>
+</main>
+<script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Leaderboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/leaderboard.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <a class="brand" href="index.html">SSB <span>TRACKER</span></a>
+  <div class="who">
+    <a class="navlink" href="dashboard.html">Dashboard</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink" href="guide.html">Guide</a>
+    <a class="navlink on" href="leaderboard.html">Leaderboard</a>
+    <a class="navlink" href="progress.html">Progress</a>
+    <a class="navlink" href="profile.html">Profile</a>
+    <button class="ghost" id="logout" type="button">Log out</button>
+  </div>
+</nav>
+
+<header class="lbhero">
+  <div class="lbhero-in">
+    <p class="eyebrow">Friendly competition</p>
+    <h1>Who is training hardest?</h1>
+    <p class="lead">Aspirants are ranked by the total number of tasks they have completed. Your best OIR quiz score is shown beside every name.</p>
+    <div class="mypos" id="mypos"></div>
+  </div>
+</header>
+
+<main class="lbwrap">
+  <section class="podium" id="podium" aria-label="Top three"></section>
+  <section class="card">
+    <h2>Top aspirants <span id="total"></span></h2>
+    <ol class="board" id="board"></ol>
+  </section>
+</main>
+
+<script src="js/leaderboard.js"></script>
+</body>
+</html>

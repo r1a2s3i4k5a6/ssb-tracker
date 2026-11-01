@@ -1,0 +1,67 @@
+/* SSB Guide page */
+a.ghost { text-decoration: none; display: inline-block; }
+.ghero { border-bottom: 1px solid var(--line);
+  background-image: linear-gradient(90deg, rgba(8,14,26,.95) 38%, rgba(8,14,26,.12)), url(../images/photos/banner.jpg), url(../images/hero.svg);
+  background-size: cover; background-position: center 68%; }
+.ghero-in { max-width: 1080px; margin: auto; padding: 52px 24px 44px; }
+.ghero .eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass-ink); margin-bottom: 8px; }
+.ghero h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1; margin-bottom: 12px; }
+.ghero .lead { color: var(--mute); max-width: 56ch; margin-bottom: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips a { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 7px 16px; font-size: 14px; color: var(--accent); text-decoration: none; box-shadow: var(--shadow); transition: .15s; }
+.chips a:hover { background: var(--accent); color: var(--on-accent); }
+
+.gwrap { max-width: 1080px; margin: auto; padding: 20px 24px 60px; }
+html { scroll-behavior: smooth; }
+.gsec { padding: 40px 0 8px; scroll-margin-top: 70px; }
+.gsec h2 { font-size: clamp(30px, 4vw, 42px); margin-bottom: 6px; }
+.gsec > .sub { color: var(--mute); margin-bottom: 22px; max-width: 62ch; }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: .6s; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* 5 days */
+.days { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: d; }
+.days li { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); border-top: 4px solid var(--brass); }
+.days b { font: 600 14px 'IBM Plex Sans', system-ui, sans-serif; color: var(--brass-ink); letter-spacing: .08em; text-transform: uppercase; }
+.days h4 { font-size: 24px; margin: 4px 0 6px; }
+.days p { font-size: 14px; color: var(--mute); }
+
+/* test cards */
+.tgroup { margin-bottom: 26px; }
+.thead { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--line); padding-bottom: 6px; margin-bottom: 14px; }
+.thead h3 { font-size: 28px; }
+.when { background: #2a2210; color: var(--brass-ink); border-radius: 20px; font-size: 12px; font-weight: 600; padding: 3px 12px; }
+.tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.tcard { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); transition: .25s; }
+.tcard:hover { transform: translateY(-4px); border-color: var(--brass); box-shadow: 0 14px 30px rgba(224,169,63,.22); }
+.tcard h4 { font-size: 22px; margin-bottom: 6px; color: var(--accent); }
+.tcard p { font-size: 14px; color: var(--ink); }
+.tcard small { display: block; margin-top: 10px; color: var(--brass-ink); font-size: 13px; }
+.cta { text-align: center; margin-top: 10px; }
+.cta .btn { display: inline-block; text-decoration: none; }
+
+/* do and don't */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.two h3 { font-size: 28px; margin-bottom: 10px; }
+.two ul { list-style: none; padding: 0; display: grid; gap: 9px; }
+.two li { padding-left: 28px; position: relative; font-size: 15px; }
+.tick li::before, .cross li::before { position: absolute; left: 0; top: 0; font-weight: 700; }
+.tick li::before { content: '\2713'; color: var(--good); }
+.cross li::before { content: '\2717'; color: var(--crim); }
+.two .good { border-top: 4px solid var(--good); }
+.two .bad { border-top: 4px solid var(--crim); }
+
+/* plan */
+.plan { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.pcard { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px; box-shadow: var(--shadow); }
+.pcard span { background: var(--accent); color: var(--on-accent); border-radius: 20px; padding: 2px 12px; font-size: 12px; font-weight: 600; }
+.pcard h4 { font-size: 24px; margin: 10px 0 6px; }
+.pcard p { font-size: 14px; color: var(--mute); }
+
+.note { margin-top: 36px; padding: 14px 18px; background: #2a2210; border-left: 4px solid var(--brass); border-radius: 8px; font-size: 14px; color: var(--ink); }
+.gfoot { border-top: 1px solid var(--line); background: var(--panel); text-align: center; padding: 30px 24px; color: var(--mute); font-size: 14px; }
+.gfoot .brand { font-size: 24px; margin-bottom: 4px; color: var(--ink); }
+
+@media (max-width: 900px) { .days, .plan { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .days, .plan, .two { grid-template-columns: 1fr; } }

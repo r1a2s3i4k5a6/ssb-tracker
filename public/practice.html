@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Practice room</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/practice.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <a class="brand" href="index.html">SSB <span>TRACKER</span></a>
+  <div class="who">
+    <a class="navlink" href="dashboard.html">Dashboard</a>
+    <a class="navlink on" href="practice.html">Practice</a>
+    <a class="navlink" href="guide.html">Guide</a>
+    <a class="navlink" href="leaderboard.html">Leaderboard</a>
+    <a class="navlink" href="progress.html">Progress</a>
+    <a class="navlink" href="profile.html">Profile</a>
+    <button class="ghost" id="logout" type="button">Log out</button>
+  </div>
+</nav>
+
+<header class="pbanner"><div class="pbanner-in">
+  <h1 class="ptitle">Practice room</h1>
+  <p class="sub">Timed drills that copy the real SSB tests.</p>
+</div></header>
+
+<main class="pwrap">
+
+  <div class="tabs" role="group" aria-label="Choose a test">
+    <button class="tab on" data-m="wat" type="button">WAT</button>
+    <button class="tab" data-m="tat" type="button">TAT</button>
+    <button class="tab" data-m="srt" type="button">SRT</button>
+    <button class="tab" data-m="oir" type="button">OIR quiz</button>
+  </div>
+
+  <!-- ================= WAT ================= -->
+  <section class="card" id="watBox">
+    <div id="watSetup">
+      <h2>Word Association Test</h2>
+      <p class="sub">A word appears for 15 seconds. Write the first positive, natural sentence that comes to mind. The real test has 60 words.</p>
+      <label class="field">Number of words
+        <select id="watCount">
+          <option value="10">10 (quick round)</option>
+          <option value="20" selected>20</option>
+          <option value="40">40</option>
+        </select>
+      </label>
+      <button class="btn" id="watStart" type="button">Start WAT</button>
+    </div>
+
+    <div id="watRun" hidden>
+      <div class="stage">
+        <div class="ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="54"/><circle class="arc" id="watArc" cx="60" cy="60" r="54"/></svg>
+          <span id="watTime">15</span>
+        </div>
+        <div class="prompt"><small id="watCounter"></small><div class="word" id="watWord"></div></div>
+      </div>
+      <input id="watInput" type="text" autocomplete="off" maxlength="200" placeholder="Write your sentence and press Enter for the next word">
+      <div class="btnrow">
+        <button class="btn" id="watNextBtn" type="button">Next word</button>
+        <button class="ghost" id="watStop" type="button">Stop</button>
+      </div>
+    </div>
+
+    <div id="watDone" hidden>
+      <h2>Session complete</h2>
+      <p class="sub">Read your sentences. Are they short, positive and about action?</p>
+      <ol class="review" id="watReview"></ol>
+      <button class="btn" id="watAgain" type="button">Practise again</button>
+    </div>
+  </section>
+
+  <!-- ================= TAT ================= -->
+  <section class="card" id="tatBox" hidden>
+    <div id="tatSetup">
+      <h2>Thematic Apperception Test</h2>
+      <p class="sub">A picture is shown for 30 seconds, then hidden. You get 4 minutes to write a story. The real test has 12 slides, and the last one is blank.</p>
+      <label class="field">Your own pictures (optional, you can choose several)
+        <input type="file" id="tatFiles" accept="image/*" multiple>
+      </label>
+      <p class="mini" id="tatInfo">No pictures chosen: you will get one blank slide to imagine your own scene.</p>
+      <button class="btn" id="tatStart" type="button">Start TAT</button>
+    </div>
+
+    <div id="tatRun" hidden>
+      <div class="stage">
+        <div class="ring">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="54"/><circle class="arc" id="tatArc" cx="60" cy="60" r="54"/></svg>
+          <span id="tatTime">0:30</span>
+        </div>
+        <div class="prompt"><small id="tatCounter"></small><div class="phase" id="tatPhase"></div></div>
+      </div>
+      <div class="picbox" id="tatPic"></div>
+      <textarea id="tatText" rows="9" disabled placeholder="What led to this? What is happening? What are the characters thinking? How does it end?"></textarea>
+      <div class="btnrow">
+        <button class="btn" id="tatDoneBtn" type="button" disabled>Finish this story</button>
+        <button class="ghost" id="tatStop" type="button">Stop</button>
+      </div>
+    </div>
+
+    <div id="tatDone" hidden>
+      <h2>Session complete</h2>
+      <p class="sub">A strong story has a hero who takes positive action and reaches a good outcome.</p>
+      <ol class="review" id="tatReview"></ol>
+      <button class="btn" id="tatAgain" type="button">Practise again</button>
+    </div>
+  </section>
+
+  <!-- ================= SRT ================= -->
+  <section class="card" id="srtBox" hidden>
+    <div id="srtSetup">
+      <h2>Situation Reaction Test</h2>
+      <p class="sub">A real-life situation appears and you get 30 seconds to write what you would actually do. The real test has 60 situations. Be quick, practical and take action.</p>
+      <label class="field">Number of situations
+        <select id="srtCount">
+          <option value="5">5 (quick round)</option>
+          <option value="10" selected>10</option>
+          <option value="24">24 (all)</option>
+        </select>
+      </label>
+      <button class="btn" id="srtStart" type="button">Start SRT</button>
+    </div>
+
+    <div id="srtRun" hidden>
+      <div class="srthead"><small class="mini" id="srtCounter"></small><b id="srtTime">30</b></div>
+      <div class="srtbar"><i id="srtBar"></i></div>
+      <div class="srtq" id="srtText"></div>
+      <input id="srtInput" type="text" autocomplete="off" maxlength="300" placeholder="I would... (press Enter for the next situation)">
+      <div class="btnrow">
+        <button class="btn" id="srtNextBtn" type="button">Next situation</button>
+        <button class="ghost" id="srtStop" type="button">Stop</button>
+      </div>
+    </div>
+
+    <div id="srtDone" hidden>
+      <h2>Session complete</h2>
+      <p class="sub">Compare your reactions with the model approach. Good answers are short, practical and show positive action.</p>
+      <ol class="review" id="srtReview"></ol>
+      <button class="btn" id="srtAgain" type="button">Practise again</button>
+    </div>
+  </section>
+
+  <!-- ================= OIR QUIZ ================= -->
+  <section class="card" id="oirBox" hidden>
+    <div id="oirSetup">
+      <h2>OIR practice quiz</h2>
+      <p class="sub">Officer Intelligence Rating questions: series, analogies, codes, directions and arithmetic. Your score is saved to your account.</p>
+      <label class="field">Number of questions
+        <select id="oirCount">
+          <option value="5">5 (quick round)</option>
+          <option value="10" selected>10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </label>
+      <button class="btn" id="oirStart" type="button">Start quiz</button>
+      <div class="hist"><h3>Your recent scores</h3><ul id="oirHist"><li>Loading...</li></ul></div>
+    </div>
+
+    <div id="oirRun" hidden>
+      <small class="mini" id="oirCounter"></small>
+      <div class="qtext" id="oirQ"></div>
+      <div class="opts" id="oirOpts"></div>
+      <div class="btnrow">
+        <button class="btn" id="oirNext" type="button" disabled>Next</button>
+        <button class="ghost" id="oirQuit" type="button">Quit</button>
+      </div>
+    </div>
+
+    <div id="oirDone" hidden>
+      <h2>Quiz complete</h2>
+      <div class="score"><span id="oirScore">0</span><small> / <span id="oirTotal">0</span></small></div>
+      <p class="sub" id="oirMsg"></p>
+      <div id="oirReview"></div>
+      <button class="btn" id="oirAgain" type="button">Try again</button>
+    </div>
+  </section>
+</main>
+
+<script src="js/practice.js"></script>
+<script src="js/srt.js"></script>
+</body>
+</html>

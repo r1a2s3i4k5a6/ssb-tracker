@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Progress report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/progress.css">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="index.html">SSB <span>TRACKER</span></a>
+  <div class="who">
+    <a class="navlink" href="dashboard.html">Dashboard</a>
+    <a class="navlink" href="practice.html">Practice</a>
+    <a class="navlink" href="guide.html">Guide</a>
+    <a class="navlink" href="leaderboard.html">Leaderboard</a>
+    <a class="navlink on" href="progress.html">Progress</a>
+    <a class="navlink" href="profile.html">Profile</a>
+    <button class="ghost" id="logout" type="button">Log out</button>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="pagehead">
+    <div><h1>Progress report</h1><p class="sub" id="range">Your last 30 days</p></div>
+    <div class="btnrow"><a class="btn" href="/api/tasks/export.csv" download>Download CSV</a><button class="btn" id="print" type="button">Print report</button></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section class="card"><h2>Tasks completed per day</h2><p class="sub">Last 30 days</p><div id="barChart"></div></section>
+
+  <div class="two-col">
+    <section class="card"><h2>By test area</h2><p class="sub">Share of planned tasks you completed</p><div id="areas"></div></section>
+    <section class="card"><h2>OIR quiz trend</h2><p class="sub">Your last attempts, oldest to newest</p><div id="quizChart"></div></section>
+  </div>
+</main>
+
+<script src="js/progress.js"></script>
+</body>
+</html>

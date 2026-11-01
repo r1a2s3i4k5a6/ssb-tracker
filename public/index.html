@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSB Tracker | Daily preparation for defence aspirants</title>
+  <meta name="description" content="Plan your day, track your tasks and build a streak until your SSB date.">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landing.css">
+</head>
+<body class="landing">
+
+<header class="nav">
+  <a class="brand" href="#top">SSB <span>TRACKER</span></a>
+  <nav aria-label="Main">
+    <a href="#features">Features</a>
+    <a href="#process">SSB process</a>
+    <a href="#entries">Entries</a>
+    <a href="about.html">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="guide.html">Guide</a>
+    <a href="#faq">FAQ</a>
+    <a href="leaderboard.html">Leaderboard</a>
+  </nav>
+  <a class="btn sm" id="navCta" href="login.html">Sign in</a>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="lhero" id="top">
+  <svg class="contour" viewBox="0 0 600 600" aria-hidden="true">
+    <ellipse cx="300" cy="300" rx="90" ry="60"/><ellipse cx="300" cy="300" rx="140" ry="105"/>
+    <ellipse cx="300" cy="300" rx="195" ry="150"/><ellipse cx="300" cy="300" rx="250" ry="200"/>
+    <ellipse cx="300" cy="300" rx="300" ry="250"/>
+  </svg>
+
+  <div class="lhero-in">
+    <div class="copy">
+      <p class="eyebrow">For NDA, CDS, AFCAT, TES and NCC aspirants</p>
+      <h1>Train every day.<br>Walk into <em>SSB</em> ready.</h1>
+      <p class="lead">A daily tracker built for SSB aspirants. Plan your schedule, tick off your tasks, practise timed tests, build a streak and rise through the ranks until your board date.</p>
+      <div class="cta">
+        <a class="btn" href="login.html" id="heroCta">Start training, it's free</a>
+        <a class="ghost-link" href="#features">See how it works</a>
+      </div>
+      <ul class="facts">
+        <li><b data-count="5">0</b><span>SSB days covered</span></li>
+        <li><b data-count="6">0</b><span>test areas tracked</span></li>
+        <li><b data-count="3">0</b><span>practice drills</span></li>
+      </ul>
+    </div>
+
+    <!-- animated preview of the dashboard -->
+    <div class="preview" aria-hidden="true">
+      <div class="pv-head">
+        <svg width="74" height="74" viewBox="0 0 74 74">
+          <circle cx="37" cy="37" r="31" fill="none" stroke="#26374f" stroke-width="6"/>
+          <circle class="pv-arc" cx="37" cy="37" r="31" fill="none" stroke="#e0a93f" stroke-width="6" stroke-linecap="round" stroke-dasharray="195" stroke-dashoffset="195" transform="rotate(-90 37 37)"/>
+        </svg>
+        <div><b>Today's mission</b><small>Day 12 of your streak</small></div>
+      </div>
+      <div class="pv-row"><span>05:30</span><i style="--d:.6s"></i><p>Morning PT and run</p></div>
+      <div class="pv-row"><span>09:00</span><i style="--d:1.4s"></i><p>Solve 20 OIR questions</p></div>
+      <div class="pv-row"><span>11:00</span><i style="--d:2.2s"></i><p>Write 4 TAT stories</p></div>
+      <div class="pv-row"><span>16:30</span><i></i><p>Group discussion practice</p></div>
+      <div class="pv-rank">
+        <svg width="30" height="30" viewBox="0 0 54 54"><path d="M8 40 L27 26 L46 40 M8 30 L27 16 L46 30" fill="none" stroke="#e0a93f" stroke-width="4"/></svg>
+        <div><small>Current rank</small><b>Sergeant</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BY THE NUMBERS ========== -->
+<section class="strip">
+  <div class="wrap striprow">
+    <div class="reveal"><b>60</b><span>OIR practice questions</span></div>
+    <div class="reveal"><b>24</b><span>SRT situations with model answers</span></div>
+    <div class="reveal"><b>15</b><span>Officer Like Qualities explained</span></div>
+    <div class="reveal"><b>6</b><span>test areas tracked every day</span></div>
+  </div>
+</section>
+
+<!-- ========== FEATURES ========== -->
+<section class="sec" id="features">
+  <div class="wrap">
+    <p class="eyebrow reveal">Everything in one place</p>
+    <h2 class="reveal">Built around how an SSB aspirant actually trains</h2>
+    <div class="grid">
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/><path class="hand" d="M24 12v12l8 5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Daily timeline</h3>
+        <p>A time-based schedule from morning PT to night revision. Tap a circle to mark a task done.</p>
+      </article>
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><path class="flame" d="M24 6c2 8 10 11 10 21a10 10 0 0 1-20 0c0-5 3-7 4-11 2 2 3 3 4 3 1-4 1-8 2-13z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <h3>Streaks that keep you honest</h3>
+        <p>Finish at least half your tasks each day to keep the streak alive. A 5-week heatmap shows your consistency.</p>
+      </article>
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><path class="chev1" d="M10 20l14-10 14 10" fill="none" stroke="currentColor" stroke-width="3"/><path class="chev2" d="M10 32l14-10 14 10" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        <h3>Earn your rank</h3>
+        <p>Every completed task moves you from Aspirant towards Officer Candidate, so effort always shows.</p>
+      </article>
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="9" fill="none" stroke="currentColor" stroke-width="2.5"/><circle class="dot" cx="24" cy="24" r="3" fill="currentColor"/></svg>
+        <h3>Timed practice room</h3>
+        <p>Practise the WAT with a 15-second timer, the TAT with 30 seconds to look and 4 minutes to write, and an OIR quiz that saves your scores.</p>
+      </article>
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><rect x="8" y="12" width="32" height="28" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M8 20h32M16 8v8M32 8v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle class="dot" cx="30" cy="30" r="3.5" fill="currentColor"/></svg>
+        <h3>SSB date countdown</h3>
+        <p>Set your board date once and see exactly how many days of preparation you have left.</p>
+      </article>
+
+      <article class="feat reveal">
+        <svg viewBox="0 0 48 48"><path d="M24 5l15 6v11c0 10-6 17-15 21C15 39 9 32 9 22V11z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path class="tick" d="M17 24l5 5 9-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <h3>Your own private account</h3>
+        <p>Passwords are encrypted and every aspirant sees only their own tasks and progress.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== SSB PROCESS ========== -->
+<section class="sec alt" id="process">
+  <div class="wrap">
+    <p class="eyebrow reveal">Know what you are training for</p>
+    <h2 class="reveal">The 5-day SSB procedure</h2>
+    <ol class="steps">
+      <li class="reveal"><b>Day 1</b><h3>Screening</h3><p>OIR test and the Picture Perception and Discussion Test (PPDT). Only screened-in candidates continue.</p></li>
+      <li class="reveal"><b>Day 2</b><h3>Psychology</h3><p>TAT, WAT, SRT and Self Description. They show how you naturally think and react.</p></li>
+      <li class="reveal"><b>Day 3 and 4</b><h3>GTO tasks</h3><p>Group discussion, group planning, outdoor tasks and the lecturette test your teamwork and leadership.</p></li>
+      <li class="reveal"><b>Alongside</b><h3>Interview</h3><p>A personal interview with the Interviewing Officer, built on your PIQ form and your life so far.</p></li>
+      <li class="reveal"><b>Day 5</b><h3>Conference</h3><p>All assessors meet, and results are announced.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ========== ENTRIES + PICTURE STRIP ========== -->
+<section class="sec" id="entries">
+  <div class="wrap">
+    <p class="eyebrow reveal">Choose your path</p>
+    <h2 class="reveal">One tracker for every entry</h2>
+    <div class="entries">
+      <div class="entry reveal"><b>NDA</b><span>After 12th</span></div>
+      <div class="entry reveal"><b>CDS</b><span>Graduates</span></div>
+      <div class="entry reveal"><b>AFCAT</b><span>Air Force</span></div>
+      <div class="entry reveal"><b>TES</b><span>Technical Entry</span></div>
+      <div class="entry reveal"><b>NCC Special</b><span>C certificate holders</span></div>
+    </div>
+
+    <!-- Pictures live in public/images (pic1.svg, pic2.svg, pic3.svg) -->
+    <div class="strip">
+      <div class="pic reveal" style="--img:url(/images/photos/discipline.jpg), url(/images/pic1.svg)"><span>Discipline</span></div>
+      <div class="pic reveal" style="--img:url(/images/photos/teamwork.jpg), url(/images/pic2.svg)"><span>Teamwork</span></div>
+      <div class="pic reveal" style="--img:url(/images/photos/leadership.jpg), url(/images/pic3.svg)"><span>Leadership</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OLQ ========== -->
+<!-- ========== GALLERY ========== -->
+<section class="sec alt" id="gallery">
+  <div class="wrap">
+    <p class="eyebrow reveal">In pictures</p>
+    <h2 class="reveal">What the training looks like</h2>
+    <p class="intro reveal">From the first run of the morning to the last interview question, every part of the board is physical, mental and practical. Here is the picture of a typical SSB week.</p>
+    <div class="mosaic">
+      <figure class="shot s1 reveal" style="--img:url(/images/photos/gallery1.jpg)"><figcaption><b>Morning PT and run</b><span>Stamina is one of the 15 OLQs</span></figcaption></figure>
+      <figure class="shot s2 reveal" style="--img:url(/images/photos/gallery2.jpg)"><figcaption><b>Group Obstacle Race</b><span>GTO, Day 3</span></figcaption></figure>
+      <figure class="shot s3 reveal" style="--img:url(/images/photos/gallery3.jpg)"><figcaption><b>Group Discussion</b><span>Power of expression</span></figcaption></figure>
+      <figure class="shot s4 reveal" style="--img:url(/images/photos/gallery4.jpg)"><figcaption><b>Lecturette</b><span>Speak for 3 minutes</span></figcaption></figure>
+      <figure class="shot s5 reveal" style="--img:url(/images/photos/gallery5.jpg)"><figcaption><b>Personal Interview</b><span>Done by the Interviewing Officer</span></figcaption></figure>
+      <figure class="shot s6 reveal" style="--img:url(/images/photos/gallery6.jpg)"><figcaption><b>Conference</b><span>Day 5 and the results</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="olq">
+  <div class="wrap">
+    <p class="eyebrow reveal">What assessors look for</p>
+    <h2 class="reveal">The 15 Officer Like Qualities</h2>
+    <p class="intro reveal">Every test in the SSB, from a group task to the interview, is used to judge these 15 qualities. Your dashboard picks one to practise every day.</p>
+    <div class="olqchips reveal" id="olqChips"></div>
+    <p class="reveal"><a class="btn" href="guide.html">Read the full SSB guide</a></p>
+  </div>
+</section>
+
+<!-- ========== ROUTINES ========== -->
+<section class="sec alt" id="routines">
+  <div class="wrap">
+    <p class="eyebrow reveal">Three ways to use it</p>
+    <h2 class="reveal">Fits around your routine</h2>
+    <div class="personas">
+      <article class="persona reveal"><span class="tag">NDA</span><h3>The school student</h3><p>Studies in the day and trains in the evening. Keeps a short timeline: a morning run, 20 OIR questions and one WAT round before bed.</p></article>
+      <article class="persona reveal"><span class="tag">CDS</span><h3>The graduate</h3><p>Has long study hours and needs consistency. Uses the streak and the 5-week heatmap, and adds group discussion and lecturette practice.</p></article>
+      <article class="persona reveal"><span class="tag">AFCAT / TES</span><h3>The working aspirant</h3><p>Has only an hour or two a day. Keeps a few key tasks, watches the SSB countdown and checks the leaderboard for motivation.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <p class="eyebrow reveal">Questions</p>
+    <h2 class="reveal">Frequently asked</h2>
+    <div class="faq reveal">
+      <details open><summary>Is SSB Tracker free?</summary><p>Yes. It is a student project, and creating an account costs nothing.</p></details>
+      <details><summary>Is my data safe?</summary><p>Passwords are hashed with bcrypt before they are saved, and every aspirant can only see their own tasks and scores. The leaderboard shows just a name, entry type, tasks done and best quiz score.</p></details>
+      <details><summary>How is my rank decided?</summary><p>Every task you complete adds to your total. As the total grows, you move up the ranks shown on your dashboard.</p></details>
+      <details><summary>Can I change the daily tasks?</summary><p>Yes. Add your own tasks with a time and a test area, and delete the ones you do not need.</p></details>
+      <details><summary>Where is my progress saved?</summary><p>In the SQLite database on the server, so your tasks, streak and quiz scores are still there the next time you log in.</p></details>
+      <details><summary>Is this an official SSB website?</summary><p>No. It is an independent student project and is not connected to the Services Selection Board or the Armed Forces.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CALL TO ACTION ========== -->
+<section class="band">
+  <div class="wrap reveal">
+    <h2>Your board date is not going to move.<br>Your habits can.</h2>
+    <a class="btn" href="login.html">Create your free account</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footgrid">
+    <div>
+      <div class="brand">SSB <span>TRACKER</span></div>
+      <p>Web Technology project by Rasika R, BCA, Sastra Deemed University.</p>
+    </div>
+    <div><h4>Explore</h4><a href="guide.html">SSB guide</a><a href="practice.html">Practice room</a><a href="leaderboard.html">Leaderboard</a><a href="login.html">Sign in</a></div>
+    <div><h4>Learn</h4><a href="#process">5-day procedure</a><a href="#olq">15 OLQs</a><a href="#faq">FAQ</a></div>
+    <div><h4>Built with</h4><p class="small">HTML, CSS and JavaScript on the front-end. Node.js, Express and SQLite on the back-end.</p></div>
+  </div>
+  <div class="wrap">
+    <p class="small">This is an independent student project. It is not affiliated with, or endorsed by, the Services Selection Board or the Indian Armed Forces.</p>
+  </div>
+</footer>
+
+<script src="js/olq.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>
